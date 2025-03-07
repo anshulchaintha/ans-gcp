@@ -3,3 +3,13 @@ options:
 steps:
   - name: 'bash'
     args: ['-c', 'echo Hello World!']
+  - name: 'bash'
+    args: ['-c', 'cat /etc/os-release']  # Displays OS release info
+  - name: 'bash'
+    args: ['-c', 'hostname']  # Displays the hostname
+  - name: 'bash'
+    args: ['-c', 'ls -l']  # Lists files in the current directory
+  - name: 'bash'
+    args: ['-c', 'df -h']  # Displays disk space usage
+  - name: 'bash'
+    args: ['-c', 'free -m']  # Displays memory usage

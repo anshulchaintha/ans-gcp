@@ -13,3 +13,9 @@ steps:
     args: ['-c', 'df -h']  # Displays disk space usage
   - name: 'bash'
     args: ['-c', 'free -m']  # Displays memory usage
+  - name: 'gcr.io/cloud-builders/docker'
+    script: |
+      docker build -t us-central1-docker.pkg.dev/$PROJECT_ID/myapp:v1 .
+    automapSubstitutions: true
+images:
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/myapp:v1'
